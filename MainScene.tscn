@@ -31,28 +31,28 @@ position = Vector2( 224, 420 )
 position = Vector2( 288, 565 )
 
 [node name="Tile17" parent="." instance=ExtResource( 2 )]
-position = Vector2( 32, 138 )
+position = Vector2( 32, 174 )
 
 [node name="Tile18" parent="." instance=ExtResource( 2 )]
-position = Vector2( 96, 138 )
+position = Vector2( 96, 174 )
 
 [node name="Tile19" parent="." instance=ExtResource( 2 )]
-position = Vector2( 159, 138 )
+position = Vector2( 159, 174 )
 
 [node name="Tile20" parent="." instance=ExtResource( 2 )]
-position = Vector2( 223, 138 )
+position = Vector2( 223, 174 )
 
 [node name="Tile21" parent="." instance=ExtResource( 2 )]
-position = Vector2( 344, 314 )
+position = Vector2( 344, 318 )
 
 [node name="Tile22" parent="." instance=ExtResource( 2 )]
-position = Vector2( 408, 314 )
+position = Vector2( 408, 318 )
 
 [node name="Tile23" parent="." instance=ExtResource( 2 )]
-position = Vector2( 471, 314 )
+position = Vector2( 471, 318 )
 
 [node name="Tile24" parent="." instance=ExtResource( 2 )]
-position = Vector2( 651, 223 )
+position = Vector2( 635, 243 )
 
 [node name="Tile6" parent="." instance=ExtResource( 2 )]
 position = Vector2( 351, 565 )
@@ -85,13 +85,13 @@ position = Vector2( 856, 565 )
 position = Vector2( 856, 501 )
 
 [node name="Tile34" parent="." instance=ExtResource( 2 )]
-position = Vector2( 732, 422 )
+position = Vector2( 732, 416 )
 
 [node name="Tile35" parent="." instance=ExtResource( 2 )]
-position = Vector2( 669, 422 )
+position = Vector2( 669, 416 )
 
 [node name="Tile36" parent="." instance=ExtResource( 2 )]
-position = Vector2( 605, 422 )
+position = Vector2( 605, 416 )
 
 [node name="Tile15" parent="." instance=ExtResource( 2 )]
 position = Vector2( 919, 565 )
@@ -103,19 +103,19 @@ position = Vector2( 982, 565 )
 position = Vector2( 1045, 565 )
 
 [node name="Tile25" parent="." instance=ExtResource( 2 )]
-position = Vector2( 740, 120 )
+position = Vector2( 740, 150 )
 
 [node name="Tile26" parent="." instance=ExtResource( 2 )]
-position = Vector2( 803, 120 )
+position = Vector2( 803, 150 )
 
 [node name="Tile27" parent="." instance=ExtResource( 2 )]
-position = Vector2( 866, 120 )
+position = Vector2( 866, 150 )
 
 [node name="Tile28" parent="." instance=ExtResource( 2 )]
-position = Vector2( 929, 120 )
+position = Vector2( 929, 150 )
 
 [node name="Tile29" parent="." instance=ExtResource( 2 )]
-position = Vector2( 992, 120 )
+position = Vector2( 992, 150 )
 
 [node name="Enemy" parent="." instance=ExtResource( 3 )]
 position = Vector2( 161, 499 )
