@@ -10,7 +10,7 @@ var vel = Vector2()
 var grounded = false
 
 onready var sprite = $Sprite
-onready var ui = get_node("/root/MainScene/CanvasLayer/UI")
+#onready var ui = get_node("/root/MainScene/CanvasLayer/UI")
 
 # physics loop
 func _physics_process(delta):
@@ -37,9 +37,8 @@ func _physics_process(delta):
 
 # called when we run into a coin
 func collect_coin (value):
-	
 	score += value
-	ui.set_score_text(score)
+	#ui.set_score_text(score)
 
 func die ():
 	
