@@ -3,7 +3,7 @@ extends Panel
 onready var scoreText = get_node("ScoreText")
 
 func set_score_text(score):
-	scoreText = str(score)
+	scoreText.text = str(score)
 
 func _ready():
-	pass
+	scoreText.text = "0"
