@@ -2,9 +2,9 @@ extends KinematicBody2D
 
 var score = 0
 
-const speed = 200
-const jumpForce = 600
-const gravity = 800
+export var speed = 400
+export var jumpForce = 600
+export var gravity = 800
 
 var vel = Vector2()
 var grounded = false
@@ -16,8 +16,7 @@ onready var ui = get_node("/root/MainScene/CanvasLayer/Container")
 # physics loop
 func _physics_process(delta):
 	
-	vel.x = 0	
-
+	vel.x = 0
 	# movement inputs
 	if Input.is_action_pressed("move_left"):
 		vel.x -= speed
