@@ -33,7 +33,7 @@ func move_to (current, to, step):
 			
 	return new
 
+
 func _on_Enemy_body_entered(body):
-	
-	if body.name == "Player": 
+	if body.name == "Player":
 		body.die()

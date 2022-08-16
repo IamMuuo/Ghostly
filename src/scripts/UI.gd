@@ -1,4 +1,4 @@
-extends Panel
+extends HBoxContainer
 
 onready var scoreText = get_node("ScoreText")
 

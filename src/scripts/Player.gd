@@ -20,6 +20,7 @@ func _physics_process(delta):
 	# movement inputs
 	if Input.is_action_pressed("move_left"):
 		vel.x -= speed
+		
 	if Input.is_action_pressed("move_right"):
 		vel.x += speed
 	
@@ -41,5 +42,4 @@ func collect_coin (value):
 	ui.set_score_text(score)
 
 func die ():
-	
 	get_tree().reload_current_scene()
