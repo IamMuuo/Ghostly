@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/shot1.png-f9eb87d7024f4732414ce9e03901bebe.stex"
+path="res://.import/Coin.png-6741a13821052cf31c16581e07fcbaec.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Screenshots/shot1.png"
-dest_files=[ "res://.import/shot1.png-f9eb87d7024f4732414ce9e03901bebe.stex" ]
+source_file="res://sprites/Coin.png"
+dest_files=[ "res://.import/Coin.png-6741a13821052cf31c16581e07fcbaec.stex" ]
 
 [params]
 
