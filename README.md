@@ -9,7 +9,7 @@ Ghostly is in its early phases and no major build is present as of now
 
 ## Screenshots
 
-<img src="Screenshots/shot1.png" height=500>
+<img src="screenshots/shot1.png" height=500>
 
 ## Contribution
 Ghostly is completely open source and all sorts of help is welcome 
