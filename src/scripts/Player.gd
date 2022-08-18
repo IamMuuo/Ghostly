@@ -49,3 +49,7 @@ func die ():
 	else:
 		get_tree().reload_current_scene()
 	
+
+func collect_health(value):
+	health += value
+	ui.set_score_text(score, health)
