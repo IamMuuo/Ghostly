@@ -7,5 +7,6 @@
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 pause_mode = 2
 stream = ExtResource( 1 )
+volume_db = -26.033
 autoplay = true
 mix_target = 1

@@ -1,6 +1,7 @@
 extends Control
 
 var is_paused = false
+onready var bg_music = Background.get_node("AudioStreamPlayer")
 
 
 func _unhandled_input(event):
@@ -14,6 +15,7 @@ func _unhandled_input(event):
 func _on_Resume_pressed():
 	get_tree().paused = false
 	visible = false
+	bg_music.stop()
 
 
 
@@ -34,3 +36,10 @@ func _on_main_menu_pressed():
 
 func _on_save_pressed():
 	pass # Replace with function body.
+
+
+func _on_PauseMenu_visibility_changed():
+	if visible:
+		bg_music.play()
+	else:
+		bg_music.stop()
