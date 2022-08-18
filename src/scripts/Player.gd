@@ -11,7 +11,7 @@ export var health = 3
 var vel = Vector2()
 var grounded = false
 
-onready var sprite = $PlayerIdle
+onready var sprite = $Player
 
 onready var ui = get_node("/root/MainScene/CanvasLayer/Container")
 
@@ -22,9 +22,18 @@ func _physics_process(delta):
 	# movement inputs
 	if Input.is_action_pressed("move_left"):
 		vel.x -= speed
+		sprite.play("walk")
+		sprite.flip_h = true
 		
-	if Input.is_action_pressed("move_right"):
+	elif Input.is_action_pressed("move_right"):
 		vel.x += speed
+		sprite.flip_h = false
+		sprite.play("walk")
+		
+	elif not is_on_floor():
+		sprite.play("jump")
+	else:
+		sprite.play("idle")
 	
 	# applying the velocity
 	vel = move_and_slide(vel, Vector2.UP)
@@ -35,12 +44,6 @@ func _physics_process(delta):
 	# jump inputs
 	if Input.is_action_pressed("jump") and is_on_floor():
 		vel.y -= jumpForce
-	
-	if vel.x < 0:
-		sprite.flip_h = true
-	elif vel.x > 0:
-		sprite.flip_h = false
-	
 
 # called when we run into a coin
 func collect_coin (value):

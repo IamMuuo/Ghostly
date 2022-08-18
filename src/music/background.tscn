@@ -5,6 +5,7 @@
 [node name="CanvasLayer" type="CanvasLayer"]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-pause_mode = 1
+pause_mode = 2
 stream = ExtResource( 1 )
 autoplay = true
+mix_target = 1
