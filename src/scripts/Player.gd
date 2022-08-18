@@ -5,6 +5,7 @@ var score = 0
 export var speed = 400
 export var jumpForce = 600
 export var gravity = 800
+export var health = 3
 
 var vel = Vector2()
 var grounded = false
@@ -39,7 +40,12 @@ func _physics_process(delta):
 # called when we run into a coin
 func collect_coin (value):
 	score += value
-	ui.set_score_text(score)
+	ui.set_score_text(score, health)
 
 func die ():
-	get_tree().reload_current_scene()
+	if health > 1:
+		health -= 1
+		ui.set_score_text(score, health)
+	else:
+		get_tree().reload_current_scene()
+	
