@@ -12,10 +12,15 @@ config_version=4
 
 config/name="Ghostly"
 run/main_scene="res://src/levels/level1.tscn"
+boot_splash/image="res://sprites/Player_Jump.png"
 boot_splash/fullsize=false
 boot_splash/use_filter=false
-boot_splash/bg_color=Color( 0.776471, 0.435294, 0.101961, 1 )
+boot_splash/bg_color=Color( 0.184314, 0.145098, 0.105882, 1 )
 config/icon="res://icon.png"
+
+[autoload]
+
+Background="*res://src/music/background.tscn"
 
 [global]
 

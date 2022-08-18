@@ -1,5 +1,6 @@
 extends KinematicBody2D
 
+
 var score = 0
 
 export var speed = 400
@@ -10,7 +11,7 @@ export var health = 3
 var vel = Vector2()
 var grounded = false
 
-onready var sprite = $Sprite
+onready var sprite = $PlayerIdle
 
 onready var ui = get_node("/root/MainScene/CanvasLayer/Container")
 
@@ -35,6 +36,10 @@ func _physics_process(delta):
 	if Input.is_action_pressed("jump") and is_on_floor():
 		vel.y -= jumpForce
 	
+	if vel.x < 0:
+		sprite.flip_h = true
+	elif vel.x > 0:
+		sprite.flip_h = false
 	
 
 # called when we run into a coin
