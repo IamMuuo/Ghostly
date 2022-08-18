@@ -828,3 +828,5 @@ margin_bottom = 120.0
 
 [node name="health" parent="." instance=ExtResource( 8 )]
 position = Vector2( 240, 1120 )
+
+[connection signal="ready" from="." to="CanvasLayer2/PauseMenu" method="_on_MainScene_ready"]

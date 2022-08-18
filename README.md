@@ -9,8 +9,8 @@ Ghostly is in its early phases and no major build is present as of now
 
 ## Screenshots
 
-<img src="screenshots/shot1.png" height=200>
-<img src="screenshots/shot2.png" height=200>
+<img src="screenshots/shot1.png" height=200><img src="screenshots/shot2.png" height=200>
+<img src="screenshots/shot3.png" height=200>
 
 ## How To Install
 Ensure you have the Godot Engine installed on your machine

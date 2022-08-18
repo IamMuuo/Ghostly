@@ -1,0 +1,70 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/font/Font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://src/menus/mainMenu/Container.gd" type="Script" id=3]
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.184314, 0.145098, 0.105882, 1 )
+
+[node name="Container" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="Container"]
+margin_left = 429.0
+margin_top = -1.0
+margin_right = 584.0
+margin_bottom = 50.0
+custom_fonts/font = ExtResource( 1 )
+text = "Ghostly"
+
+[node name="new_game" type="Button" parent="Container"]
+margin_left = 50.0
+margin_top = 222.0
+margin_right = 200.0
+margin_bottom = 272.0
+text = "New Game"
+
+[node name="load_game" type="Button" parent="Container"]
+margin_left = 50.0
+margin_top = 285.0
+margin_right = 200.0
+margin_bottom = 335.0
+text = "Load Game"
+
+[node name="settings" type="Button" parent="Container"]
+margin_left = 50.0
+margin_top = 354.0
+margin_right = 200.0
+margin_bottom = 404.0
+text = "Settings"
+
+[node name="credits" type="Button" parent="Container"]
+margin_left = 50.0
+margin_top = 416.0
+margin_right = 200.0
+margin_bottom = 466.0
+text = "Credits"
+
+[node name="quit" type="Button" parent="Container"]
+margin_left = 50.0
+margin_top = 484.0
+margin_right = 200.0
+margin_bottom = 534.0
+text = "Quit"
+
+[node name="Icon" type="Sprite" parent="Container"]
+position = Vector2( 629, 21 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 2 )
+
+[connection signal="pressed" from="Container/new_game" to="Container" method="_on_new_game_pressed"]
+[connection signal="pressed" from="Container/quit" to="Container" method="_on_quit_pressed"]

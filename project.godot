@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="Ghostly"
-run/main_scene="res://src/levels/level1.tscn"
+run/main_scene="res://src/menus/mainMenu/MainMenu.tscn"
 boot_splash/image="res://sprites/Player_Jump.png"
 boot_splash/fullsize=false
 boot_splash/use_filter=false
