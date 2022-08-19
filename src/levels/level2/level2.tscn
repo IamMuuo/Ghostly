@@ -826,3 +826,6 @@ margin_bottom = 120.0
 position = Vector2( 983, 597 )
 stream = ExtResource( 8 )
 autoplay = true
+
+[connection signal="ready" from="." to="CanvasLayer2/PauseMenu" method="_on_level2_ready"]
+[connection signal="ready" from="CanvasLayer2/PauseMenu" to="CanvasLayer2/PauseMenu" method="_on_PauseMenu_ready"]

@@ -23,16 +23,16 @@ func _on_Resume_pressed():
 func _on_MainScene_ready():
 	self.visible = false
 
-#
-#func _on_reload_pressed():
-#	get_tree().change_scene("res://src/levels/level1.tscn")
-#	queue_free()
 
-
-func _on_main_menu_pressed():
-	Background.get_node("AudioStreamPlayer").play()
-	get_tree().change_scene("res://src/menus/mainMenu/MainMenu.tscn")
+func _on_reload_pressed():
+	get_tree().change_scene("res://src/levels/level1.tscn")
 	queue_free()
+
+#
+#func _on_main_menu_pressed():
+#	Background.get_node("AudioStreamPlayer").play()
+#	get_tree().change_scene("res://src/menus/mainMenu/MainMenu.tscn")
+#	queue_free()
 
 
 func _on_save_pressed():
@@ -44,3 +44,9 @@ func _on_PauseMenu_visibility_changed():
 		bg_music.play()
 	else:
 		bg_music.stop()
+
+
+
+
+func _on_level2_ready():
+	visible = false
