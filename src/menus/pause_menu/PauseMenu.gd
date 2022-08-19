@@ -29,10 +29,10 @@ func _on_reload_pressed():
 	queue_free()
 
 #
-#func _on_main_menu_pressed():
-#	Background.get_node("AudioStreamPlayer").play()
-#	get_tree().change_scene("res://src/menus/mainMenu/MainMenu.tscn")
-#	queue_free()
+func _on_main_menu_pressed():
+	Background.get_node("AudioStreamPlayer").play()
+	get_tree().change_scene("res://src/menus/mainMenu/MainMenu.tscn")
+	queue_free()
 
 
 func _on_save_pressed():

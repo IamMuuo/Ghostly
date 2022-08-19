@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 
-var score = 0
+export var score = 0
 
 export var speed = 400
 export var jumpForce = 600

@@ -1,13 +1,25 @@
 tool
 extends Area2D
 
+var game_file = File.new()
 
 onready var anim_player: AnimationPlayer = $AnimationPlayer
 
 export var next_scene: PackedScene
 
 
-func _on_body_entered(body: PhysicsBody2D):
+func _on_body_entered(body):
+	game_file.open("user://save_game.dat", File.WRITE)
+	print(game_file.get_path())
+	
+	var db = {
+		"player_health": body.health,
+		"player_coins": body.score
+	}
+	
+	game_file.store_var(db)
+	game_file.close()
+	
 	teleport()
 
 
