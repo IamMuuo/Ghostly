@@ -12,6 +12,8 @@ var vel = Vector2()
 var grounded = false
 
 onready var sprite = $Player
+onready var player = get_node(".")
+
 
 onready var ui = get_node("/root/MainScene/CanvasLayer/Container")
 
