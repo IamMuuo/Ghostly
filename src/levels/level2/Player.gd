@@ -15,7 +15,7 @@ onready var sprite = $Player
 onready var player = get_node(".")
 
 
-onready var ui = get_node("/root/MainScene/CanvasLayer/Container")
+onready var ui = get_node("/root/level2/CanvasLayer/Container")
 
 # physics loop
 func _physics_process(delta):
