@@ -53,6 +53,7 @@ func collect_coin (value):
 	ui.set_score_text(score, health)
 
 func die ():
+	vel.y -= jumpForce
 	if health > 1:
 		health -= 1
 		ui.set_score_text(score, health)
