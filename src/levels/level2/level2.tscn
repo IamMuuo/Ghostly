@@ -18,6 +18,7 @@ script = ExtResource( 10 )
 pause_mode = 2
 
 [node name="PauseMenu" parent="CanvasLayer2" instance=ExtResource( 7 )]
+visible = false
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 66, 1257 )
