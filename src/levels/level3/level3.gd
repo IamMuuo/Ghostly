@@ -1,6 +1,5 @@
 extends Node2D
 
-onready var ui = get_node("c")
 onready var player = get_node("Player")
 var game_file = File.new()
 
