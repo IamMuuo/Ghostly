@@ -15,7 +15,6 @@ onready var sprite = $Player
 onready var player = get_node(".")
 
 
-onready var ui = get_node("/root/level1/CanvasLayer/Container")
 
 # physics loop
 func _physics_process(delta):
@@ -50,17 +49,17 @@ func _physics_process(delta):
 # called when we run into a coin
 func collect_coin (value):
 	score += value
-	ui.set_score_text(score, health)
+	return score
 
 func die ():
 	vel.y -= jumpForce
 	if health > 1:
 		health -= 1
-		ui.set_score_text(score, health)
+		return health
 	else:
 		get_tree().reload_current_scene()
 	
 
 func collect_health(value):
 	health += value
-	ui.set_score_text(score, health)
+	return health
