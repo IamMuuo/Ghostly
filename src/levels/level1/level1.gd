@@ -29,7 +29,6 @@ func _on_Level1_exiting():
 	game_file.open("user://save_game.dat", File.WRITE)
 	db["player_health"] = player.health
 	db["player_score"] = player.score
-	print(db)
 	game_file.store_var(db)
 	game_file.close()
 	
