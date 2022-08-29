@@ -1,21 +1,45 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://src/levels/level1/level1.gd" type="Script" id=1]
+[ext_resource path="res://src/scenes/scoreHud.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/scenes/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/scenes/Tile.tscn" type="PackedScene" id=3]
-
-[sub_resource type="TileSet" id=1]
+[ext_resource path="res://src/scenes/Enemy.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/levels/level1/level1.gd" type="Script" id=5]
+[ext_resource path="res://src/scenes/Coin.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/scenes/health.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/scenes/PauseGui.tscn" type="PackedScene" id=8]
+[ext_resource path="res://audio/lvl1.mp3" type="AudioStream" id=9]
 
 [node name="Level1" type="Node2D"]
-script = ExtResource( 1 )
+script = ExtResource( 5 )
+
+[node name="Tile202" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1470, -33 )
+
+[node name="levelMusic" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 1000, 752 )
+stream = ExtResource( 9 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Container" parent="CanvasLayer" instance=ExtResource( 1 )]
+margin_right = 225.0
+margin_bottom = 96.0
+
+[node name="PauseGui" parent="." instance=ExtResource( 8 )]
 
 [node name="camera" type="Camera2D" parent="."]
 position = Vector2( 504, 288 )
+offset = Vector2( 40, 50 )
 current = true
 process_mode = 0
+limit_left = -75
+limit_top = -100
+limit_right = 2000
+limit_bottom = 1550
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 62, 108 )
+position = Vector2( 50, 96 )
 
 [node name="Tile" parent="." instance=ExtResource( 3 )]
 position = Vector2( 31, 249 )
@@ -28,6 +52,15 @@ position = Vector2( 154, 249 )
 
 [node name="Tile4" parent="." instance=ExtResource( 3 )]
 position = Vector2( 218, 249 )
+
+[node name="Tile123" parent="." instance=ExtResource( 3 )]
+position = Vector2( 277, 249 )
+
+[node name="Tile124" parent="." instance=ExtResource( 3 )]
+position = Vector2( 336, 249 )
+
+[node name="Tile125" parent="." instance=ExtResource( 3 )]
+position = Vector2( 400, 249 )
 
 [node name="Tile5" parent="." instance=ExtResource( 3 )]
 position = Vector2( 31, 483 )
@@ -110,14 +143,107 @@ position = Vector2( 950, 1304 )
 [node name="Tile80" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1009, 1304 )
 
+[node name="Tile92" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1575, 1032 )
+
+[node name="Tile93" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1623, 1032 )
+
+[node name="Tile94" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1687, 1032 )
+
+[node name="Tile95" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1746, 1032 )
+
+[node name="Tile114" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1379, 830 )
+
+[node name="Tile115" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1224, 1096 )
+
+[node name="Tile116" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1464, 1032 )
+
+[node name="Tile117" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1523, 1032 )
+
+[node name="Tile96" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1810, 1032 )
+
+[node name="Tile97" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1869, 1032 )
+
+[node name="Tile98" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1933, 1032 )
+
+[node name="Tile99" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1992, 1032 )
+
+[node name="Tile100" parent="." instance=ExtResource( 3 )]
+position = Vector2( 656, 528 )
+
+[node name="Tile101" parent="." instance=ExtResource( 3 )]
+position = Vector2( 704, 560 )
+
+[node name="Tile102" parent="." instance=ExtResource( 3 )]
+position = Vector2( 763, 592 )
+
+[node name="Tile103" parent="." instance=ExtResource( 3 )]
+position = Vector2( 827, 624 )
+
+[node name="Tile104" parent="." instance=ExtResource( 3 )]
+position = Vector2( 886, 656 )
+
+[node name="Tile105" parent="." instance=ExtResource( 3 )]
+position = Vector2( 950, 656 )
+
+[node name="Tile106" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1014, 656 )
+
+[node name="Tile108" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1073, 656 )
+
+[node name="Tile109" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1137, 656 )
+
+[node name="Tile110" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1201, 656 )
+
+[node name="Tile111" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1256, 656 )
+
+[node name="Tile112" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1320, 656 )
+
+[node name="Tile113" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1443, 830 )
+
+[node name="Tile118" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1224, 217 )
+
+[node name="Tile119" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1288, 217 )
+
+[node name="Tile120" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1343, 217 )
+
+[node name="Tile121" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1407, 217 )
+
+[node name="Tile122" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1448, 156 )
+
+[node name="Tile107" parent="." instance=ExtResource( 3 )]
+position = Vector2( 608, 1240 )
+
 [node name="Tile81" parent="." instance=ExtResource( 3 )]
-position = Vector2( 352, 1032 )
+position = Vector2( 375, 1064 )
 
 [node name="Tile82" parent="." instance=ExtResource( 3 )]
-position = Vector2( 416, 1032 )
+position = Vector2( 439, 1064 )
 
 [node name="Tile83" parent="." instance=ExtResource( 3 )]
-position = Vector2( 480, 1032 )
+position = Vector2( 503, 1064 )
 
 [node name="Tile84" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1192, 1504 )
@@ -130,6 +256,214 @@ position = Vector2( 1320, 1504 )
 
 [node name="Tile24" parent="." instance=ExtResource( 3 )]
 position = Vector2( 33, 1568 )
+
+[node name="Tile126" parent="." instance=ExtResource( 3 )]
+position = Vector2( -33, 1568 )
+rotation = -1.5708
+
+[node name="Tile127" parent="." instance=ExtResource( 3 )]
+position = Vector2( -33, 1506 )
+rotation = -1.5708
+
+[node name="Tile128" parent="." instance=ExtResource( 3 )]
+position = Vector2( -33, 1442 )
+rotation = -1.5708
+
+[node name="Tile129" parent="." instance=ExtResource( 3 )]
+position = Vector2( -33, 1380 )
+rotation = -1.5708
+
+[node name="Tile130" parent="." instance=ExtResource( 3 )]
+position = Vector2( -33, 1316 )
+rotation = -1.5708
+
+[node name="Tile131" parent="." instance=ExtResource( 3 )]
+position = Vector2( -33, 1254 )
+rotation = -1.5708
+
+[node name="Tile132" parent="." instance=ExtResource( 3 )]
+position = Vector2( -33, 1190 )
+rotation = -1.5708
+
+[node name="Tile133" parent="." instance=ExtResource( 3 )]
+position = Vector2( -33, 1128 )
+rotation = -1.5708
+
+[node name="Tile134" parent="." instance=ExtResource( 3 )]
+position = Vector2( -33, 1065 )
+rotation = -1.5708
+
+[node name="Tile135" parent="." instance=ExtResource( 3 )]
+position = Vector2( -33, 1003 )
+rotation = -1.5708
+
+[node name="Tile136" parent="." instance=ExtResource( 3 )]
+position = Vector2( -33, 939 )
+rotation = -1.5708
+
+[node name="Tile137" parent="." instance=ExtResource( 3 )]
+position = Vector2( -33, 877 )
+rotation = -1.5708
+
+[node name="Tile138" parent="." instance=ExtResource( 3 )]
+position = Vector2( -33, 813 )
+rotation = -1.5708
+
+[node name="Tile139" parent="." instance=ExtResource( 3 )]
+position = Vector2( -33, 751 )
+rotation = -1.5708
+
+[node name="Tile140" parent="." instance=ExtResource( 3 )]
+position = Vector2( -33, 687 )
+rotation = -1.5708
+
+[node name="Tile141" parent="." instance=ExtResource( 3 )]
+position = Vector2( -33, 625 )
+rotation = -1.5708
+
+[node name="Tile142" parent="." instance=ExtResource( 3 )]
+position = Vector2( -33, 562 )
+rotation = -1.5708
+
+[node name="Tile143" parent="." instance=ExtResource( 3 )]
+position = Vector2( -33, 500 )
+rotation = -1.5708
+
+[node name="Tile144" parent="." instance=ExtResource( 3 )]
+position = Vector2( -33, 436 )
+rotation = -1.5708
+
+[node name="Tile145" parent="." instance=ExtResource( 3 )]
+position = Vector2( -33, 374 )
+rotation = -1.5708
+
+[node name="Tile146" parent="." instance=ExtResource( 3 )]
+position = Vector2( -33, 310 )
+rotation = -1.5708
+
+[node name="Tile147" parent="." instance=ExtResource( 3 )]
+position = Vector2( -33, 248 )
+rotation = -1.5708
+
+[node name="Tile148" parent="." instance=ExtResource( 3 )]
+position = Vector2( -33, 184 )
+rotation = -1.5708
+
+[node name="Tile149" parent="." instance=ExtResource( 3 )]
+position = Vector2( -33, 122 )
+rotation = -1.5708
+
+[node name="Tile150" parent="." instance=ExtResource( 3 )]
+position = Vector2( -33, 59 )
+rotation = -1.5708
+
+[node name="Tile151" parent="." instance=ExtResource( 3 )]
+position = Vector2( -33, -3 )
+rotation = -1.5708
+
+[node name="Tile152" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2024, 1571 )
+rotation = 1.5708
+
+[node name="Tile153" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2024, 1509 )
+rotation = 1.5708
+
+[node name="Tile154" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2024, 1445 )
+rotation = 1.5708
+
+[node name="Tile155" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2024, 1383 )
+rotation = 1.5708
+
+[node name="Tile156" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2024, 1319 )
+rotation = 1.5708
+
+[node name="Tile157" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2024, 1257 )
+rotation = 1.5708
+
+[node name="Tile158" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2024, 1193 )
+rotation = 1.5708
+
+[node name="Tile159" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2024, 1131 )
+rotation = 1.5708
+
+[node name="Tile160" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2024, 1068 )
+rotation = 1.5708
+
+[node name="Tile161" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2024, 1006 )
+rotation = 1.5708
+
+[node name="Tile162" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2024, 942 )
+rotation = 1.5708
+
+[node name="Tile163" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2024, 880 )
+rotation = 1.5708
+
+[node name="Tile164" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2024, 816 )
+rotation = 1.5708
+
+[node name="Tile165" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2024, 754 )
+rotation = 1.5708
+
+[node name="Tile166" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2024, 690 )
+rotation = 1.5708
+
+[node name="Tile167" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2024, 628 )
+rotation = 1.5708
+
+[node name="Tile168" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2024, 565 )
+rotation = 1.5708
+
+[node name="Tile169" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2024, 503 )
+rotation = 1.5708
+
+[node name="Tile170" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2024, 439 )
+rotation = 1.5708
+
+[node name="Tile171" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2024, 377 )
+rotation = 1.5708
+
+[node name="Tile172" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2024, 313 )
+rotation = 1.5708
+
+[node name="Tile173" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2024, 251 )
+rotation = 1.5708
+
+[node name="Tile174" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2024, 187 )
+rotation = 1.5708
+
+[node name="Tile175" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2024, 125 )
+rotation = 1.5708
+
+[node name="Tile176" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2024, 62 )
+rotation = 1.5708
+
+[node name="Tile177" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2024, 0 )
+rotation = 1.5708
 
 [node name="Tile25" parent="." instance=ExtResource( 3 )]
 position = Vector2( 97, 1568 )
@@ -227,69 +561,271 @@ position = Vector2( 1927, 1568 )
 [node name="Tile56" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1986, 1568 )
 
+[node name="Tile178" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1, -33 )
+
+[node name="Tile179" parent="." instance=ExtResource( 3 )]
+position = Vector2( 65, -33 )
+
+[node name="Tile180" parent="." instance=ExtResource( 3 )]
+position = Vector2( 124, -33 )
+
+[node name="Tile181" parent="." instance=ExtResource( 3 )]
+position = Vector2( 188, -33 )
+
+[node name="Tile182" parent="." instance=ExtResource( 3 )]
+position = Vector2( 247, -33 )
+
+[node name="Tile183" parent="." instance=ExtResource( 3 )]
+position = Vector2( 311, -33 )
+
+[node name="Tile184" parent="." instance=ExtResource( 3 )]
+position = Vector2( 370, -33 )
+
+[node name="Tile185" parent="." instance=ExtResource( 3 )]
+position = Vector2( 434, -33 )
+
+[node name="Tile186" parent="." instance=ExtResource( 3 )]
+position = Vector2( 498, -33 )
+
+[node name="Tile187" parent="." instance=ExtResource( 3 )]
+position = Vector2( 562, -33 )
+
+[node name="Tile188" parent="." instance=ExtResource( 3 )]
+position = Vector2( 608, -33 )
+
+[node name="Tile189" parent="." instance=ExtResource( 3 )]
+position = Vector2( 672, -33 )
+
+[node name="Tile190" parent="." instance=ExtResource( 3 )]
+position = Vector2( 731, -33 )
+
+[node name="Tile191" parent="." instance=ExtResource( 3 )]
+position = Vector2( 795, -33 )
+
+[node name="Tile192" parent="." instance=ExtResource( 3 )]
+position = Vector2( 854, -33 )
+
+[node name="Tile193" parent="." instance=ExtResource( 3 )]
+position = Vector2( 918, -33 )
+
+[node name="Tile194" parent="." instance=ExtResource( 3 )]
+position = Vector2( 977, -33 )
+
+[node name="Tile195" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1041, -33 )
+
+[node name="Tile196" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1105, -33 )
+
+[node name="Tile197" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1169, -33 )
+
+[node name="Tile198" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1224, -33 )
+
+[node name="Tile199" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1288, -33 )
+
+[node name="Tile200" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1347, -33 )
+
+[node name="Tile201" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1411, -33 )
+
+[node name="Tile203" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1534, -33 )
+
+[node name="Tile204" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1593, -33 )
+
+[node name="Tile205" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1657, -33 )
+
+[node name="Tile206" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1721, -33 )
+
+[node name="Tile207" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1785, -33 )
+
+[node name="Tile208" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1831, -33 )
+
+[node name="Tile209" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1895, -33 )
+
+[node name="Tile210" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1954, -33 )
+
 [node name="Tile57" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2050, 1568 )
+position = Vector2( 1169, 1096 )
 
 [node name="Tile58" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2109, 1568 )
+position = Vector2( 1607, 288 )
 
 [node name="Tile59" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2173, 1568 )
+position = Vector2( 33, 855 )
 
 [node name="Tile60" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2232, 1568 )
+position = Vector2( 92, 855 )
 
 [node name="Tile61" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2296, 1568 )
+position = Vector2( 156, 855 )
 
 [node name="Tile62" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2360, 1568 )
+position = Vector2( 220, 855 )
 
 [node name="Tile63" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2424, 1568 )
+position = Vector2( 284, 855 )
 
 [node name="Tile19" parent="." instance=ExtResource( 3 )]
-position = Vector2( 827, 249 )
+position = Vector2( 1009, 358 )
 
 [node name="Tile20" parent="." instance=ExtResource( 3 )]
-position = Vector2( 886, 249 )
+position = Vector2( 1068, 358 )
 
 [node name="Tile21" parent="." instance=ExtResource( 3 )]
-position = Vector2( 950, 249 )
+position = Vector2( 1132, 358 )
 
 [node name="Tile22" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1014, 249 )
+position = Vector2( 1196, 358 )
 
 [node name="Tile23" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1078, 249 )
+position = Vector2( 672, 1240 )
 
 [node name="Tile87" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2144, 528 )
+position = Vector2( 1707, 496 )
 
 [node name="Tile88" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2203, 528 )
+position = Vector2( 1766, 496 )
 
 [node name="Tile89" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2267, 528 )
+position = Vector2( 1830, 496 )
 
 [node name="Tile90" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2331, 528 )
+position = Vector2( 1894, 496 )
 
 [node name="Tile91" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2395, 528 )
+position = Vector2( 1958, 496 )
 
 [node name="Tile13" parent="." instance=ExtResource( 3 )]
-position = Vector2( 464, 108 )
+position = Vector2( 750, 217 )
 
 [node name="Tile14" parent="." instance=ExtResource( 3 )]
-position = Vector2( 528, 108 )
+position = Vector2( 814, 217 )
 
 [node name="Tile15" parent="." instance=ExtResource( 3 )]
-position = Vector2( 587, 108 )
+position = Vector2( 873, 217 )
 
 [node name="Tile16" parent="." instance=ExtResource( 3 )]
-position = Vector2( 651, 108 )
+position = Vector2( 937, 217 )
 
-[node name="TileMap" type="TileMap" parent="."]
-tile_set = SubResource( 1 )
-format = 1
+[node name="Coin" parent="." instance=ExtResource( 6 )]
+position = Vector2( 155, 164 )
+
+[node name="Coin2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 245, 164 )
+
+[node name="Coin3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 341, 164 )
+
+[node name="Coin5" parent="." instance=ExtResource( 6 )]
+position = Vector2( 156, 391 )
+
+[node name="Coin6" parent="." instance=ExtResource( 6 )]
+position = Vector2( 246, 391 )
+
+[node name="Coin7" parent="." instance=ExtResource( 6 )]
+position = Vector2( 342, 391 )
+
+[node name="Coin8" parent="." instance=ExtResource( 6 )]
+position = Vector2( 72, 1488 )
+
+[node name="Coin9" parent="." instance=ExtResource( 6 )]
+position = Vector2( 150, 1488 )
+
+[node name="Coin10" parent="." instance=ExtResource( 6 )]
+position = Vector2( 246, 1488 )
+
+[node name="Coin11" parent="." instance=ExtResource( 6 )]
+position = Vector2( 336, 1488 )
+
+[node name="Coin12" parent="." instance=ExtResource( 6 )]
+position = Vector2( 426, 1488 )
+
+[node name="Coin13" parent="." instance=ExtResource( 6 )]
+position = Vector2( 522, 1488 )
+
+[node name="Coin14" parent="." instance=ExtResource( 6 )]
+position = Vector2( 626, 1488 )
+
+[node name="Coin15" parent="." instance=ExtResource( 6 )]
+position = Vector2( 716, 1488 )
+
+[node name="Coin16" parent="." instance=ExtResource( 6 )]
+position = Vector2( 812, 1488 )
+
+[node name="Coin17" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1502, 1472 )
+
+[node name="Coin18" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1592, 1472 )
+
+[node name="Coin19" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1688, 1472 )
+
+[node name="Coin20" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1623, 946 )
+
+[node name="Coin21" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1713, 946 )
+
+[node name="Coin22" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1809, 946 )
+
+[node name="Coin29" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1785, 425 )
+
+[node name="Coin30" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1872, 425 )
+
+[node name="Coin23" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1078, 560 )
+
+[node name="Coin24" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1168, 560 )
+
+[node name="Coin25" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1264, 560 )
+
+[node name="Coin26" parent="." instance=ExtResource( 6 )]
+position = Vector2( 65, 774 )
+
+[node name="Coin27" parent="." instance=ExtResource( 6 )]
+position = Vector2( 155, 774 )
+
+[node name="Coin28" parent="." instance=ExtResource( 6 )]
+position = Vector2( 439, 980 )
+
+[node name="Enemy" parent="." instance=ExtResource( 4 )]
+position = Vector2( 51, 408 )
+speed = 200
+moveDist = 400
+
+[node name="Enemy2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 104, 1504 )
+speed = 250
+moveDist = 800
+
+[node name="Enemy3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1411, 1488 )
+speed = 250
+moveDist = 300
+
+[node name="Coin4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 886, 131 )
+
+[node name="health" parent="." instance=ExtResource( 7 )]
+position = Vector2( 240, 1232 )
+
+[connection signal="tree_exiting" from="." to="." method="_on_Level1_exiting"]
