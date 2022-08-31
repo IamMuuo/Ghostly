@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/scenes/Tile.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/levels/level3/Level3.gd" type="Script" id=2]
@@ -6,9 +6,16 @@
 [ext_resource path="res://src/scenes/Enemy.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/scenes/Coin.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/scenes/scoreHud.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/levels/level4/Level4.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/scenes/Portal.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/scenes/PauseGui.tscn" type="PackedScene" id=9]
 
 [node name="Level3" type="Node2D"]
 script = ExtResource( 2 )
+
+[node name="Portal2D" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3040, 488 )
+next_scene = ExtResource( 7 )
 
 [node name="Tile14" parent="." instance=ExtResource( 1 )]
 position = Vector2( 64, 2072 )
@@ -1693,6 +1700,8 @@ position = Vector2( 1392, 264 )
 
 [node name="Coin59" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1472, 264 )
+
+[node name="PauseGui" parent="." instance=ExtResource( 9 )]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
