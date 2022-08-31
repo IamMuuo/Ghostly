@@ -1418,9 +1418,9 @@ position = Vector2( 1878, 1512 )
 
 [node name="PauseGui" parent="." instance=ExtResource( 8 )]
 
+[node name="levelMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Container" parent="CanvasLayer" instance=ExtResource( 7 )]
-
-[node name="levelMusic" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 9 )
