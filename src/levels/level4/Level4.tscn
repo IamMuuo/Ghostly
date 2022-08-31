@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://src/scenes/Coin.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/scenes/tile2.tscn" type="PackedScene" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://src/scenes/scoreHud.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/scenes/PauseGui.tscn" type="PackedScene" id=8]
 [ext_resource path="res://audio/lvl4.mp3" type="AudioStream" id=9]
+[ext_resource path="res://src/scenes/Portal.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/levels/level5/Level5.tscn" type="PackedScene" id=11]
 
 [node name="Level4" type="Node2D"]
 position = Vector2( 0, -144 )
@@ -1424,3 +1426,7 @@ stream = ExtResource( 9 )
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Container" parent="CanvasLayer" instance=ExtResource( 7 )]
+
+[node name="Portal2D" parent="." instance=ExtResource( 10 )]
+position = Vector2( 2752, 376 )
+next_scene = ExtResource( 11 )
