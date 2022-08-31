@@ -44,9 +44,3 @@ func _on_PauseMenu_visibility_changed():
 		bg_music.play()
 	else:
 		bg_music.stop()
-
-
-
-
-func _on_level2_ready():
-	visible = false
