@@ -13,7 +13,7 @@ var game_file = File.new()
 func _ready():
 	camera.position = player.position
 	pause.visible = false
-	music.play()
+	music.play(25.5)
 	
 func _physics_process(delta):
 	camera.position = player.position

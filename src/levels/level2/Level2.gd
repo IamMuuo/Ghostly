@@ -4,6 +4,7 @@ onready var player = get_node("Player")
 onready var camera = get_node("camera")
 onready var ui = get_node("CanvasLayer/Container")
 onready var pause = get_node("PauseGui/PauseMenu")
+onready var music = get_node("AudioStreamPlayer")
 
 var db = {}
 
@@ -15,6 +16,7 @@ func _ready():
 	player.score = db["player_score"]
 	camera.position = player.position
 	pause.visible = false
+	music.play()
 	
 func _physics_process(delta):
 	camera.position = player.position
