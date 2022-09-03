@@ -1,9 +1,17 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/font/Font.tres" type="DynamicFont" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
 [ext_resource path="res://src/menus/mainMenu/Container.gd" type="Script" id=3]
 [ext_resource path="res://themes/theme.tres" type="Theme" id=4]
+[ext_resource path="res://src/menus/mainMenu/credits.tscn" type="PackedScene" id=5]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.972549, 0.0431373, 0.0431373, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
@@ -12,6 +20,13 @@ margin_left = -1.0
 margin_top = -1.0
 margin_right = -1.0
 margin_bottom = -1.0
+
+[node name="Popup" parent="." instance=ExtResource( 5 )]
+margin_left = 259.0
+margin_top = 171.0
+margin_right = 755.0
+margin_bottom = 542.0
+popup_exclusive = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
@@ -65,6 +80,7 @@ margin_left = 50.0
 margin_top = 484.0
 margin_right = 200.0
 margin_bottom = 534.0
+custom_styles/hover = SubResource( 1 )
 text = "Quit"
 
 [node name="Icon" type="Sprite" parent="Container"]
@@ -73,4 +89,5 @@ scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 2 )
 
 [connection signal="pressed" from="Container/new_game" to="Container" method="_on_new_game_pressed"]
+[connection signal="pressed" from="Container/credits" to="Popup" method="_on_credits_pressed"]
 [connection signal="pressed" from="Container/quit" to="Container" method="_on_quit_pressed"]

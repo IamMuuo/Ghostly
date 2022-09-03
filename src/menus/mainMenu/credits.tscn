@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/font/Font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://src/scenes/Enemy.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/scenes/Player.tres" type="SpriteFrames" id=3]
+[ext_resource path="res://src/menus/mainMenu/credits.gd" type="Script" id=4]
+
+[node name="Popup" type="AcceptDialog"]
+visible = true
+margin_right = 496.0
+margin_bottom = 371.0
+window_title = "Ghostly Credits"
+script = ExtResource( 4 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.482353, 0.482353, 0.482353, 0 )
+
+[node name="Enemy" parent="ColorRect" instance=ExtResource( 2 )]
+position = Vector2( 164, 95 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Label2" type="Label" parent="ColorRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -239.0
+margin_top = 1.0
+margin_right = 241.0
+margin_bottom = 64.0
+custom_fonts/font = ExtResource( 1 )
+text = "Ghostly Credits"
+align = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label3" type="RichTextLabel" parent="ColorRect"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -239.0
+margin_top = -217.0
+margin_right = 241.0
+margin_bottom = -40.0
+rect_scale = Vector2( 1, 0.919999 )
+text = "Created And Maintained By Erick
+
+Ghostly is completely open source and distributed under the Mozilla Public License
+
+All contributions are welcome.
+
+For more information visit the github page here."
+scroll_following = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="ColorRect"]
+position = Vector2( 323, 91 )
+scale = Vector2( 0.6, 0.6 )
+frames = ExtResource( 3 )
+animation = "walk"
+playing = true
