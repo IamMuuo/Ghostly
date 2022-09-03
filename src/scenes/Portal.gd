@@ -19,4 +19,4 @@ func _get_configuration_warning() -> String:
 func teleport() -> void:
 	anim_player.play("fade_out")
 	yield(anim_player, "animation_finished")
-	assert(get_tree().change_scene_to(next_scene) == OK)
+	get_tree().change_scene_to(next_scene)
