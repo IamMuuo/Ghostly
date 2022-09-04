@@ -2,10 +2,8 @@
 ***
 
 ## Description
-Ghostly is a game project made using GdScript and the Godot Game Engine as I learn
+Ghostly is a platformer game project made using GdScript and the Godot Game Engine as I learn
 how to use the engine.
-
-Ghostly is in its early phases and no major build is present as of now
 
 ## Screenshots
 
@@ -21,9 +19,10 @@ Compile it using the engine
 
 
 ## Prebuilt game version
-As of now there is no version release of the game since it's in early stages of development 
+Compilation is in progress and I am ready to build and release a beta version of the game
 
 ## Contribution
-Ghostly is completely open source and all sorts of help is welcome 
-and appreciated.
+Ghostly is completely open source and all sorts of help and bug tracking are welcome 
+and appreciated.<br>
+All music in this project do not belong to me but all rights are reserved to the various owners.
 
