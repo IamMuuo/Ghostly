@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://src/scenes/soil.tres" type="TileSet" id=1]
 [ext_resource path="res://src/levels/level3/Level3.gd" type="Script" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://src/scenes/PauseGui.tscn" type="PackedScene" id=9]
 [ext_resource path="res://src/scenes/brick.tres" type="TileSet" id=10]
 [ext_resource path="res://audio/lvl3.mp3" type="AudioStream" id=11]
+[ext_resource path="res://sprites/desert.jpg" type="Texture" id=12]
 
 [node name="Level3" type="Node2D"]
 script = ExtResource( 2 )
@@ -23,6 +24,10 @@ next_scene = ExtResource( 7 )
 position = Vector2( 648, 1328 )
 current = true
 process_mode = 0
+limit_left = -50
+limit_top = -100
+limit_right = 3200
+limit_bottom = 2150
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 704, 1832 )
@@ -281,3 +286,14 @@ tile_data = PoolIntArray( 327695, 0, 0, 327696, 0, 0, 327697, 0, 0, 327698, 0, 0
 
 [node name="levelMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )
+
+[node name="backgroundImage" type="CanvasLayer" parent="."]
+layer = -20
+follow_viewport_enable = true
+
+[node name="Sprite" type="Sprite" parent="backgroundImage"]
+self_modulate = Color( 0.929412, 0.929412, 0.929412, 1 )
+scale = Vector2( 0.73, 1 )
+texture = ExtResource( 12 )
+centered = false
+flip_h = true

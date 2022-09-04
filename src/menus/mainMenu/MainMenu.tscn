@@ -90,6 +90,7 @@ layer = -100
 
 [node name="Sprite" type="Sprite" parent="CanvasLayer"]
 modulate = Color( 0.65098, 0.65098, 0.65098, 1 )
+position = Vector2( 4, -4 )
 scale = Vector2( 0.24, 0.27 )
 texture = ExtResource( 6 )
 centered = false
