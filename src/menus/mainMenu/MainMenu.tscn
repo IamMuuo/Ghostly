@@ -23,6 +23,7 @@ margin_right = -1.0
 margin_bottom = -1.0
 
 [node name="Popup" parent="." instance=ExtResource( 5 )]
+visible = false
 margin_left = 259.0
 margin_top = 171.0
 margin_right = 755.0

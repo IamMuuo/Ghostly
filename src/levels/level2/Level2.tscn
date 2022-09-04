@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://src/levels/level2/Level2.gd" type="Script" id=1]
 [ext_resource path="res://src/scenes/Player.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://src/scenes/Portal.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/levels/level3/Level3.tscn" type="PackedScene" id=9]
 [ext_resource path="res://src/scenes/soil.tres" type="TileSet" id=10]
+[ext_resource path="res://sprites/desert.jpg" type="Texture" id=11]
 
 [node name="Level2" type="Node2D"]
 script = ExtResource( 1 )
@@ -28,12 +29,15 @@ margin_bottom = 96.0
 position = Vector2( 112, 1392 )
 
 [node name="camera" type="Camera2D" parent="."]
-position = Vector2( 520, 1256 )
+position = Vector2( 384, 1384 )
 current = true
 process_mode = 0
 limit_left = -45
+limit_top = -100
+limit_right = 2368
 limit_bottom = 1600
 smoothing_enabled = true
+smoothing_speed = 10.0
 
 [node name="Coin" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1568, 1544 )
@@ -164,6 +168,17 @@ tile_data = PoolIntArray( -65538, 0, 0, -65537, 0, 0, -131072, 0, 0, -131071, 0,
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
+
+[node name="backgroundImage" type="CanvasLayer" parent="."]
+layer = -20
+follow_viewport_enable = true
+
+[node name="Desert" type="Sprite" parent="backgroundImage"]
+modulate = Color( 0.992157, 0.992157, 0.992157, 1 )
+self_modulate = Color( 0.686275, 0.686275, 0.686275, 1 )
+position = Vector2( 1136, 840 )
+scale = Vector2( 0.55, 0.78 )
+texture = ExtResource( 11 )
 
 [connection signal="tree_entered" from="." to="." method="_on_Level2_entered"]
 [connection signal="tree_exiting" from="." to="." method="_on_Level2_exiting"]
