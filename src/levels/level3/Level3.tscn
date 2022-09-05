@@ -297,3 +297,6 @@ scale = Vector2( 0.73, 1 )
 texture = ExtResource( 12 )
 centered = false
 flip_h = true
+
+[connection signal="tree_entered" from="." to="." method="_on_Level3_entered"]
+[connection signal="tree_exiting" from="." to="." method="_on_Level3_exiting"]

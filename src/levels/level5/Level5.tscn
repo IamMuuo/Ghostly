@@ -733,3 +733,6 @@ self_modulate = Color( 0.862745, 0.815686, 0.815686, 1 )
 scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 10 )
 centered = false
+
+[connection signal="tree_entered" from="." to="." method="_on_Level5_entered"]
+[connection signal="tree_exiting" from="." to="." method="_on_Level5_exiting"]
